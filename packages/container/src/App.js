@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div>
       <h1 style={{ textAlign: 'center' }}>
-        Hello ! I'm container, you are inside me !
+        Hello world ! I'm container, you are inside me !
       </h1>
       <hr />
       <MarketingApp />
