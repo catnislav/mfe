@@ -1,4 +1,4 @@
-import { mount } from 'marketing/AuthApp';
+import { mount } from 'auth/AuthApp';
 import React, { useRef, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
@@ -22,7 +22,7 @@ const AuthApp = () => {
     history.listen(onParentNavigate);
   }, []);
 
-  return <div ref={ref}></div>;
+  return <div ref={ref} />;
 };
 
 export default AuthApp;

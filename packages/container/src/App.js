@@ -19,8 +19,8 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route path="/auth" component={AuthApp} />
-          <Route exact path="/" component={MarketingApp} />
+            <Route path="/auth" component={AuthApp} />
+            <Route path="/" component={MarketingApp} />
         </Switch>
       </BrowserRouter>
     </StylesProvider>

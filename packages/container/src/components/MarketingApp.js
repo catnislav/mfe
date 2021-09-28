@@ -11,16 +11,16 @@ const MarketingApp = () => {
       onNavigate: ({ pathname: nextPathname }) => {
         const { pathname } = history.location;
 
-        // console.log(nextPathname);
-
-        if (pathname !== nextPathname) history.push(nextPathname);
+        if (pathname !== nextPathname) {
+          history.push(nextPathname);
+        }
       },
     });
 
     history.listen(onParentNavigate);
   }, []);
 
-  return <div ref={ref}></div>;
+  return <div ref={ref} />;
 };
 
 export default MarketingApp;

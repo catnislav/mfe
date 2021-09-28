@@ -7,7 +7,9 @@ import App from './App';
 const mount = (el, { onNavigate, defaultHistory }) => {
   const history = defaultHistory || createMemoryHistory();
 
-  if (onNavigate) history.listen(onNavigate);
+  if (onNavigate) {
+    history.listen(onNavigate);
+  }
 
   // const App = () => {
   //   return <h1>Marketing</h1>;
@@ -23,7 +25,9 @@ const mount = (el, { onNavigate, defaultHistory }) => {
     onParentNavigate({ pathname: nextPathname }) {
       const { pathname } = history.location;
       // console.log('Container just navigated');
-      if (pathname !== nextPathname) history.push(nextPathname);
+      if (pathname !== nextPathname) {
+        history.push(nextPathname);
+      }
     },
   };
 };
@@ -32,7 +36,9 @@ const mount = (el, { onNavigate, defaultHistory }) => {
 if (process.env.NODE_ENV === 'development') {
   const devRoot = document.querySelector('#_auth-dev-root');
 
-  if (devRoot) mount(devRoot, { defaultHistory: createBrowserHistory });
+  if (devRoot) {
+    mount(devRoot, { defaultHistory: createBrowserHistory() });
+  }
 }
 
 // We are running through container and we should export the mount function
