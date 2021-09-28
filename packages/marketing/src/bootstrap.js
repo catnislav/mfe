@@ -11,14 +11,6 @@ const mount = (el, { onNavigate, defaultHistory }) => {
     history.listen(onNavigate);
   }
 
-  // const App = () => {
-  //   return <h1>Marketing</h1>;
-  // };
-
-  // console.log('Marketing !!!');
-
-  // el.innerHTML = marketing;
-
   ReactDOM.render(<App history={history} />, el);
 
   return {
@@ -32,7 +24,8 @@ const mount = (el, { onNavigate, defaultHistory }) => {
   };
 };
 
-// If we are in development and in isolation call mount immediately
+// If we are in development and in isolation,
+// call mount immediately
 if (process.env.NODE_ENV === 'development') {
   const devRoot = document.querySelector('#_marketing-dev-root');
 
@@ -41,5 +34,6 @@ if (process.env.NODE_ENV === 'development') {
   }
 }
 
-// We are running through container and we should export the mount function
+// We are running through container
+// and we should export the mount function
 export { mount };
